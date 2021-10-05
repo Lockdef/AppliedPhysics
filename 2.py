@@ -34,10 +34,20 @@ def plot_prob1():
     y = list(map(lambda x: max_x(x / 2), x))
     plt.plot(x, y)
     plt.show()
+    plt.close()
+
+
+def calc_t(r):
+    m = calc_m(r)
+    return -m**2 - 4.95918 ** 10 ** 7 / m * (m + 4892.91)
 
 
 def plot_prob2():
     x = list(map(lambda x: x / 1e6, range(1001)))
+    y = list(map(lambda x: calc_m(x / 2), x))
+    plt.plot(x, y)
+    plt.show()
+    plt.close()
 
 
 if __name__ == '__main__':
