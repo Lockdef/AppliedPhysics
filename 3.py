@@ -20,11 +20,7 @@ def sin(x):
 x = np.linspace(0.0, np.pi, 100)
 
 
-y1 = []
-y2 = []
-y3 = []
-
-print(x)
+y1, y2, y3 = [], [], []
 
 for i in x:
     y1.append(sin(i)[0])
